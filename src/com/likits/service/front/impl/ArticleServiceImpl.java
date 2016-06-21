@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.likits.dao.front.ArticleDao;
+import com.likits.entity.front.Article;
 import com.likits.service.front.ArticleService;
 public class ArticleServiceImpl implements ArticleService{
 
@@ -16,14 +17,17 @@ public class ArticleServiceImpl implements ArticleService{
 	public List<Map<String, Object>> getArticlePaged() {
 		List<Map<String, Object>> result = new ArrayList<>();
 		Map<String, Object> articleInfo = null;
+		Article article = null;
 		/**
 		 * TODO:加入分页
 		 * 此处mock数据
 		 */
-		for(int i = 0; i < 8; i++) {
+		List<Article> articles = articleDao.getArticleInfo(0, 10);
+		for(int i = 0; i < articles.size(); i++) {
 			articleInfo = new HashMap<>();
-			articleInfo.put("newsId", i);
-			articleInfo.put("newsTitle", "苏格兰代表队2017赛季主客场球服预赏");
+			article = articles.get(i);
+			articleInfo.put("newsId", article.getId());
+			articleInfo.put("newsTitle", article.getTitle());
 			articleInfo.put("newsDesc", "现在一个球队有三套球衣，主场，客场，第三球衣（备用球衣）主场作战的球队穿主场球衣。这是最大前提...");
 			articleInfo.put("newsUser", "爱足球的猫");
 			articleInfo.put("newsUserAvatar", "assets/images/img2/img2.jpg");
@@ -42,6 +46,12 @@ public class ArticleServiceImpl implements ArticleService{
 
 	public void setArticleDao(ArticleDao articleDao) {
 		this.articleDao = articleDao;
+	}
+
+	@Override
+	public void addArticle(Map<String, Object> articleInfo) {
+		// TODO Auto-generated method stub
+		return;
 	}
 
 }

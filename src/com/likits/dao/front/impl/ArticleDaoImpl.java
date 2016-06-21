@@ -11,14 +11,14 @@ public class ArticleDaoImpl extends BaseDao<Article, Integer>implements ArticleD
 	@Override
 	public List<Article> getArticleInfo(int start, int end) {
 		String queryStr = "from likits_articles";
-		queryStr += "where id >= " + start +" and id < " + end;
+		queryStr += " where id > " + start +" and id < " + end;
 	   	return this.find(queryStr);
 	}
 	
 	@Override
 	public Article getArticlebyId(int articleId) {
 		String queryStr = "from likits_articles";
-		queryStr += "where id = " + articleId;
+		queryStr += " where id = " + articleId;
 		return this.find(queryStr).get(0);
 	}
 	
@@ -33,5 +33,4 @@ public class ArticleDaoImpl extends BaseDao<Article, Integer>implements ArticleD
 		String queryStr = "from Article order by rand()";
 		return this.findBylimit(queryStr, 5);
 	}
-	
 }

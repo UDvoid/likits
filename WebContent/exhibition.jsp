@@ -151,6 +151,7 @@
 						<div class="layer">
 							<h1 class="search_title">推荐内容</h1>
 							<div class="search_users">
+								<c:if test="${ recommendArticles != null }">
 								<c:forEach var="recommendArticle" items="${ recommendArticles }">
 								<div class="search_user clearfix">
 									<a href="#">
@@ -164,6 +165,7 @@
 									</a>
 								</div>
 								</c:forEach>
+								</c:if>
 							</div>
 						</div>
 						<img src="assets/images/tuijian1.jpg" alt="">

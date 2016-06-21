@@ -29,22 +29,96 @@ private static final long serialVersionUID = 1L;
 	@Column(name="publishTime")
 	private Date publishTime;
 	
-	
 	@Column(name="content")
 	private String content;
 	
+	@Column(name="readCounter")
+	private Integer readCounter;
 	
 	@Column(name="starCounter")
-	private String starCounter;
+	private Integer starCounter;
+	
+	@Column(name="forwardCounter")
+	private Integer forwardCounter;
 	
 	@Column(name="user")
-	private Integer userId;
+	private Integer user;
 	
 	@Column(name="tag")
-	private Integer tagId;
+	private Integer tag;
 	
-	@Column(length = 200, name="CoverImage")
+	@Column(name="coverImage")
 	private String coverImage;
+	
+	@Column(name="infoOrArticleTags")
+	private Integer infoOrArticleTags;
+	
+	@Column(name="infoOrArticleSubTags")
+	private Integer infoOrArticleSubTags;
+	
+	public Integer getReadCounter() {
+		return readCounter;
+	}
+
+	public void setReadCounter(Integer readCounter) {
+		this.readCounter = readCounter;
+	}
+
+	public Integer getStarCounter() {
+		return starCounter;
+	}
+
+	public void setStarCounter(Integer starCounter) {
+		this.starCounter = starCounter;
+	}
+
+	public Integer getForwardCounter() {
+		return forwardCounter;
+	}
+
+	public void setForwardCounter(Integer forwardCounter) {
+		this.forwardCounter = forwardCounter;
+	}
+
+	public Integer getUser() {
+		return user;
+	}
+
+	public void setUser(Integer user) {
+		this.user = user;
+	}
+
+	public Integer getTag() {
+		return tag;
+	}
+
+	public void setTag(Integer tag) {
+		this.tag = tag;
+	}
+
+	public String getCoverImage() {
+		return coverImage;
+	}
+
+	public void setCoverImage(String coverImage) {
+		this.coverImage = coverImage;
+	}
+
+	public Integer getInfoOrArticleTags() {
+		return infoOrArticleTags;
+	}
+
+	public void setInfoOrArticleTags(Integer infoOrArticleTags) {
+		this.infoOrArticleTags = infoOrArticleTags;
+	}
+
+	public Integer getInfoOrArticleSubTags() {
+		return infoOrArticleSubTags;
+	}
+
+	public void setInfoOrArticleSubTags(Integer infoOrArticleSubTags) {
+		this.infoOrArticleSubTags = infoOrArticleSubTags;
+	}
 
 	public Integer getId() {
 		return id;
@@ -84,37 +158,5 @@ private static final long serialVersionUID = 1L;
 
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-	public String getStarCounter() {
-		return starCounter;
-	}
-
-	public void setStarCounter(String starCounter) {
-		this.starCounter = starCounter;
-	}
-
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-
-	public Integer getTagId() {
-		return tagId;
-	}
-
-	public void setTagId(Integer tagId) {
-		this.tagId = tagId;
-	}
-
-	public String getCoverImage() {
-		return coverImage;
-	}
-
-	public void setCoverImage(String coverImage) {
-		this.coverImage = coverImage;
 	}
 }

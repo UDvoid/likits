@@ -44,16 +44,18 @@ public class RecommendServiceImpl implements RecommendService {
 		 * 随机选取5个内容
 		 */
 		
-		List<Article> articles = articleDao.getRecommendArticle();
-		
-		for(int i = 0; i < 5; i++) {
-			articleInfo = new HashMap<>();
-			Article article = articles.get(i); 
-			articleInfo.put("newsId", article.getId());
-			articleInfo.put("newsTitle", article.getTitle().substring(0, 5));
-			articleInfo.put("newsDesc", article.getContent().substring(0, 10));
-			articleInfo.put("newsImage", String.format("assets/images/%07d/1.jpg", article.getId()));
-			result.add(articleInfo);
+		List<Article> articles = null;
+		//articles = articleDao.getRecommendArticle();
+		if(articles != null) {
+			for(int i = 0; i < 5; i++) {
+				articleInfo = new HashMap<>();
+				Article article = articles.get(i); 
+				articleInfo.put("newsId", article.getId());
+				articleInfo.put("newsTitle", article.getTitle().substring(0, 5));
+				articleInfo.put("newsDesc", article.getContent().substring(0, 10));
+				articleInfo.put("newsImage", String.format("assets/images/%07d/1.jpg", article.getId()));
+				result.add(articleInfo);
+			}
 		}
 		return result;
 	}
