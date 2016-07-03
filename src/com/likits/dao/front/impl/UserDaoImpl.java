@@ -24,4 +24,11 @@ public class UserDaoImpl extends BaseDao<User, Integer> implements UserDao {
 		return this.find(queryStr);
 	}
 
+	@Override
+	public User findById(Integer id) {
+		String queryStr = "from User";
+	   	queryStr += String.format(" where id = %d", id);
+		return this.find(queryStr).get(0);
+	}
+
 }

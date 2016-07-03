@@ -24,9 +24,9 @@
 	
 	<bean id="articleService" class="com.likits.service.front.impl.ArticleServiceImpl">
 		<property name="articleDao" ref="articleDao"></property>
+		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
-
 	
 	<!-- 后台管理系统  -->
 	<bean id="adminLoginAction" class="com.likits.action.admin.LoginAction">

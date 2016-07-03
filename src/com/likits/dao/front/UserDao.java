@@ -11,4 +11,6 @@ public interface UserDao extends Dao<User, Integer>{
 	//List<AdminUser> findUsers(String adminName,String password);
 
 	List<User> findByEmailAndPassword(String email, String password);
+	
+	User findById(Integer id);
 }

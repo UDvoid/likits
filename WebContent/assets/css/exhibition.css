@@ -553,3 +553,265 @@ modified date : 2016/1/4
 	float: left;
 	height: 100%;
 }
+.content_title
+{
+	height:90px;
+	font-size: 30px;
+   /* margin-top: 57px;*/
+    /*margin-bottom: -15px;*/
+    padding-top: 28px; \
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.content_author
+{
+	height:auto;
+	width:1020px;
+	background: #ffffff;
+	box-sizing:border-box;
+	display: inline-block;
+
+}
+.content_author_con
+{
+	display: block;
+	width:200px;
+	height: 70px;
+	margin-left: 45%;
+	margin-bottom: 3px;
+	padding-top:6px;
+	padding-bottom: 3px;
+	box-sizing:border-box;
+}
+.content_author .author_pic
+{
+	
+	display:inline-block;
+}
+.content_author img
+{
+	width:60px;
+	height:60px;
+	border-radius:50%;
+}
+.author_info
+{
+	display:inline-block;
+	text-align: left;
+}
+.author_info .author_name
+{
+	font-size:16px;
+	padding:3px 0px;
+}
+.author_info .small_size
+{
+	-webkit-text-size-adjust: none;
+	font-size: 5px;
+}
+.content_text
+{
+	/*width:800px;*/
+	/*margin:0,auto;*/
+}
+.content_text img
+{
+	width:800px;
+	height: 600px;
+}
+.content_text p
+{
+	font-size:16px;
+	line-height: 28px;
+	width:800px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+.content_tag
+{
+	border-bottom: 1px solid #e5e5e5;
+	margin-top: 30px;
+	padding-bottom: 5px;
+	position: relative;
+	width: 800px;
+    left: 140px;
+    text-align: left;
+}
+.tag_label
+{
+	font-size:15px;
+	position: relative;
+	left:0px;
+	height: 30px;
+	width:64px;
+	line-height: 30px;
+	display: inline-block;
+}
+.tag_yellow
+{
+	background: #ffa631;
+	font-size: 18px;
+	line-height: 18px;
+	color:white; 
+	width:auto;
+	height: auto;
+	border-radius: 3px;
+	position: relative;
+	left:-15px;
+	padding:5px 10px;
+	display: inline-block;
+}
+.tag_like
+{
+	background: url(../images/like.png) center left no-repeat;
+	width: 60px;
+	position: relative;
+	left: 545px;
+	display: inline-block;
+	padding-left: 30px;
+
+}
+.tag_share
+{
+	font-size:15px;
+	position: absolute;
+	right:140px;
+}
+.tag_comment
+{
+	font-size:15px;
+	position: relative;
+	left:535px;
+	display: inline-block;
+}
+.content_create_comment
+{
+	margin-top:18px;
+	heigth:80px;
+}
+.content_create_comment textarea
+{
+	width:800px;
+	height: 50px;
+}
+.content_create_comment button
+{
+	background:#6dcff6;
+	position: absolute;
+	height: 20px;
+	width:60px;
+	display: block;
+	right: 140px;
+	border-width: 0px;
+	border-radius: 3px;
+	color:white;
+	font-size: 14px;
+	margin-top:5px; 
+}
+.content_show_comment
+{
+	padding-top: 50px;
+    padding-bottom: 80px;
+	position: relative;
+}
+.commet_pic
+{
+	position: relative;
+}
+.comment_pic img
+{
+	width:38px;
+	height: 38px;
+	border-radius: 50%;
+	position: absolute;
+    left: 140px;
+}
+.comment_con
+{
+	background: white;
+	width:740px;
+	height: auto;
+	left:240px;
+	position: absolute;
+}
+.comment_block
+{
+	width:0px;
+	height: 0px;
+	border-top: 12px solid white;
+	border-right: 14px  solid white;
+	border-bottom: 12px solid transparent;
+	border-left: 12px solid transparent;
+	position: absolute;
+	display: inline-block;
+	left: -60px;
+    top: 8px;
+    z-index: 1;
+}
+.comment_text
+{
+	padding:10px 10px 38px 18px;
+	position: absolute;
+	box-sizing:border-box;
+	width:720px;
+	height: auto;
+	text-align: left;
+	border-width:0px 1px 1px 1px;
+	border-color: #aba5a5;
+	left: -36px;
+    top: 8px;
+    background: white;
+    border-style: solid
+}
+.comment_time
+{
+	text-align: right;
+	width:120px;
+	right:8px;
+	bottom: 4px;
+	position:absolute;
+
+}
+.block
+{
+	margin:50px 0px;
+}
+.bgfix
+{
+	padding-bottom: 70px;
+}
+.comment_reply
+{
+	font-size: 15px;
+    position: absolute;
+    right: 6px;
+    bottom: -24px;
+}
+.top_pass .report
+{
+	/*background: url(../images/report.jpg) center left no-repeat;*/
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	display: inline-block;
+}
+.top_pass .message
+{
+
+}
+.report-message
+{
+	font-size: 14px;
+    color: #dfdfdf;
+    margin: 0 5px;
+    display: inline-block;
+    height: 30px;
+    position: relative;
+    bottom: 6px
+}
+.searchfix
+{
+	width: 77px;
+}

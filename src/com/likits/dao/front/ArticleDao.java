@@ -13,4 +13,6 @@ public interface ArticleDao extends Dao<Article, Integer>{
 	int getArticleCount();
 	
 	List<Article> getRecommendArticle();
+	
+	int addArticle(Article article);
 }

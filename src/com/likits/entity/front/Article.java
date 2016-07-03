@@ -20,11 +20,8 @@ private static final long serialVersionUID = 1L;
 	@Column(name = "id", unique = true, nullable = false)
 	private Integer id;
 	
-	@Column(length = 100,name="title")
+	@Column(length = 1000,name="title")
 	private String title;
-	
-	@Column(name="category")
-	private String category;
 	
 	@Column(name="publishTime")
 	private Date publishTime;
@@ -42,19 +39,26 @@ private static final long serialVersionUID = 1L;
 	private Integer forwardCounter;
 	
 	@Column(name="user")
-	private Integer user;
+	private Integer userId;
 	
 	@Column(name="tag")
-	private Integer tag;
+	private Integer tagId;
 	
 	@Column(name="coverImage")
 	private String coverImage;
 	
+	@Column(name="category")
+	private String categoryId;
+	
 	@Column(name="infoOrArticleTags")
-	private Integer infoOrArticleTags;
+	private Integer infoOrArticleTagsId;
 	
 	@Column(name="infoOrArticleSubTags")
-	private Integer infoOrArticleSubTags;
+	private Integer infoOrArticleSubTagsId;
+	
+	@Column(name="state")
+	private Integer stateId;
+	
 	
 	public Integer getReadCounter() {
 		return readCounter;
@@ -80,22 +84,7 @@ private static final long serialVersionUID = 1L;
 		this.forwardCounter = forwardCounter;
 	}
 
-	public Integer getUser() {
-		return user;
-	}
-
-	public void setUser(Integer user) {
-		this.user = user;
-	}
-
-	public Integer getTag() {
-		return tag;
-	}
-
-	public void setTag(Integer tag) {
-		this.tag = tag;
-	}
-
+	
 	public String getCoverImage() {
 		return coverImage;
 	}
@@ -104,22 +93,7 @@ private static final long serialVersionUID = 1L;
 		this.coverImage = coverImage;
 	}
 
-	public Integer getInfoOrArticleTags() {
-		return infoOrArticleTags;
-	}
-
-	public void setInfoOrArticleTags(Integer infoOrArticleTags) {
-		this.infoOrArticleTags = infoOrArticleTags;
-	}
-
-	public Integer getInfoOrArticleSubTags() {
-		return infoOrArticleSubTags;
-	}
-
-	public void setInfoOrArticleSubTags(Integer infoOrArticleSubTags) {
-		this.infoOrArticleSubTags = infoOrArticleSubTags;
-	}
-
+		
 	public Integer getId() {
 		return id;
 	}
@@ -136,14 +110,6 @@ private static final long serialVersionUID = 1L;
 		this.title = title;
 	}
 
-	public String getCategory() {
-		return category;
-	}
-
-	public void setCategory(String category) {
-		this.category = category;
-	}
-
 	public Date getPublishTime() {
 		return publishTime;
 	}
@@ -158,5 +124,53 @@ private static final long serialVersionUID = 1L;
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public Integer getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
+
+	public Integer getTagId() {
+		return tagId;
+	}
+
+	public void setTagId(Integer tagId) {
+		this.tagId = tagId;
+	}
+
+	public String getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public Integer getInfoOrArticleTagsId() {
+		return infoOrArticleTagsId;
+	}
+
+	public void setInfoOrArticleTagsId(Integer infoOrArticleTagsId) {
+		this.infoOrArticleTagsId = infoOrArticleTagsId;
+	}
+
+	public Integer getInfoOrArticleSubTagsId() {
+		return infoOrArticleSubTagsId;
+	}
+
+	public void setInfoOrArticleSubTagsId(Integer infoOrArticleSubTagsId) {
+		this.infoOrArticleSubTagsId = infoOrArticleSubTagsId;
+	}
+
+	public Integer getStateId() {
+		return stateId;
+	}
+
+	public void setStateId(Integer stateId) {
+		this.stateId = stateId;
 	}
 }

@@ -38,6 +38,11 @@
         	<result name="error">/404-page.jsp</result>	
         </action>
         
+        <action name="publish_*" class="publishAction" method="{1}">
+        </action>
+        
+        <action name="upload" class="uploadAction"></action>
+        
 	</package>
 	
 </struts>

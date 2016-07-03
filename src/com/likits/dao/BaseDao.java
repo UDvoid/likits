@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
+import org.hibernate.FlushMode;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 public abstract class BaseDao<T, PK extends Serializable> extends
@@ -20,7 +21,7 @@ public abstract class BaseDao<T, PK extends Serializable> extends
 
   // Save object into database
   public void save(T entity) {
-    getHibernateTemplate().save(entity);
+	getHibernateTemplate().save(entity);
   }
 
   // Update object
